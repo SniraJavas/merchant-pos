@@ -1,3 +1,4 @@
+import { useRouter } from 'expo-router';
 import { CreditCard, Shield, Smartphone, User } from 'lucide-react-native';
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
@@ -5,9 +6,15 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 export interface HomeScreenProps {
   userBalance: string | number;
   onStartPayment: () => void;
-}
+};
 
-const HomeScreen: React.FC<HomeScreenProps> = ({ userBalance, onStartPayment }) => {
+const HomeScreen: React.FC<HomeScreenProps> = ({ userBalance }) => {
+      const router = useRouter();
+
+      const onStartPayment = () => {
+        router.push('/payment');  // navigate to payment screen
+      };
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
