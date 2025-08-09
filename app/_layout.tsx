@@ -25,6 +25,7 @@ export default function RootLayout() {
         <Stack.Screen name="payment" options={{ title: 'Confirm Payment' }} />
         <Stack.Screen name="scanning" options={{ title: 'Scan' }} />
         <Stack.Screen name="success" options={{ title: 'Success' }} />
+        <Stack.Screen name="failure" options={{ title: 'Failure' }} />
         <Stack.Screen name="+not-found" />
       </Stack>
 
