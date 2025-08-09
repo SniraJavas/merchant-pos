@@ -1,6 +1,6 @@
+import { useRouter } from 'expo-router';
 import { Camera } from 'lucide-react-native';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-
 interface PaymentScreenProps {
   merchantName : string | number;
   paymentAmount : string | number;
@@ -8,7 +8,18 @@ interface PaymentScreenProps {
   onCancelPress : () => void;
 }
 
-const PaymentScreen : React.FC<PaymentScreenProps> = ({ merchantName, paymentAmount, onScanPress, onCancelPress }) => {
+const PaymentScreen : React.FC<PaymentScreenProps> = ({ merchantName, paymentAmount}) => {
+
+  const router = useRouter();
+  
+  const onScanPress = () => {
+    router.push('/scanning');
+  };
+
+  const onCancelPress = () => {
+    router.push('/home');
+  };
+  
   return (
     <View style={[styles.container, { backgroundColor: 'white' }]}>
       <View style={styles.header}>
