@@ -3,7 +3,7 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 interface ScanningScreenProps {
   scanProgress : number, 
-  isScanning : string | number, 
+  isScanning : boolean, 
   merchantName : string | number, 
   paymentAmount : string | number, 
   onCancelPress : () => void;
