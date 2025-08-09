@@ -2,7 +2,7 @@ import { User } from 'lucide-react-native';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 interface ScanningScreenProps {
-  scanProgress : string | number, 
+  scanProgress : number, 
   isScanning : string | number, 
   merchantName : string | number, 
   paymentAmount : string | number, 
